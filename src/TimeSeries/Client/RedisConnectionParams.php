@@ -1,41 +1,28 @@
 <?php
+
 declare(strict_types=1);
 
-namespace Palicao\PhpRedisTimeSeries\Client;
+namespace Palicao\PhpRedisTimeSeries\TimeSeries\Client;
 
 final class RedisConnectionParams
 {
-    /** @var bool */
-    private $persistentConnection;
+    private bool $persistentConnection;
 
-    /** @var string */
-    private $host;
+    private string $host;
 
-    /** @var int */
-    private $port;
+    private int $port;
 
-    /** @var int */
-    private $timeout;
+    private int $timeout;
 
-    /** @var int */
-    private $retryInterval;
+    private int $retryInterval;
 
-    /** @var float */
-    private $readTimeout;
+    private float $readTimeout;
 
-    /** @var string|null */
-    private $username;
+    private ?string $username;
 
-    /** @var string|null */
-    private $password;
+    private ?string $password;
 
-    /**
-     * RedisConnectionParams constructor.
-     * @param string $host
-     * @param int $port
-     * @param string|null $username
-     * @param string|null $password
-     */
+
     public function __construct(
         string $host = '127.0.0.1',
         int $port = 6379,
@@ -54,8 +41,6 @@ final class RedisConnectionParams
 
     /**
      * Whether to use a persistent connection
-     * @param bool $persistentConnection
-     * @return RedisConnectionParams
      */
     public function setPersistentConnection(bool $persistentConnection): RedisConnectionParams
     {
@@ -65,8 +50,6 @@ final class RedisConnectionParams
 
     /**
      * Connection timeout (in seconds)
-     * @param int $timeout
-     * @return RedisConnectionParams
      */
     public function setTimeout(int $timeout): RedisConnectionParams
     {
@@ -76,8 +59,6 @@ final class RedisConnectionParams
 
     /**
      * Retry interval (in seconds)
-     * @param int $retryInterval
-     * @return RedisConnectionParams
      */
     public function setRetryInterval(int $retryInterval): RedisConnectionParams
     {
@@ -87,8 +68,6 @@ final class RedisConnectionParams
 
     /**
      * Read timeout in seconds
-     * @param float $readTimeout
-     * @return RedisConnectionParams
      */
     public function setReadTimeout(float $readTimeout): RedisConnectionParams
     {

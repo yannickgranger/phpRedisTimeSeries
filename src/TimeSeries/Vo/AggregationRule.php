@@ -1,11 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
-namespace Palicao\PhpRedisTimeSeries;
+namespace Palicao\PhpRedisTimeSeries\TimeSeries\Vo;
 
-use Palicao\PhpRedisTimeSeries\Exception\InvalidAggregationException;
+use Palicao\PhpRedisTimeSeries\TimeSeries\Exception\InvalidAggregationException;
 
-/** @psalm-immutable */
 final class AggregationRule
 {
     public const AGG_AVG = 'AVG';

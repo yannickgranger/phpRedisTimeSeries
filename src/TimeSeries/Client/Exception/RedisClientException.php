@@ -1,7 +1,8 @@
 <?php
+
 declare(strict_types=1);
 
-namespace Palicao\PhpRedisTimeSeries\Exception;
+namespace Palicao\PhpRedisTimeSeries\TimeSeries\Client\Exception;
 
 use RuntimeException;
 

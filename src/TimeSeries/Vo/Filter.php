@@ -1,9 +1,10 @@
 <?php
+
 declare(strict_types=1);
 
-namespace Palicao\PhpRedisTimeSeries;
+namespace Palicao\PhpRedisTimeSeries\TimeSeries\Vo;
 
-use Palicao\PhpRedisTimeSeries\Exception\InvalidFilterOperationException;
+use Palicao\PhpRedisTimeSeries\TimeSeries\Exception\InvalidFilterOperationException;
 
 final class Filter
 {
@@ -24,22 +25,15 @@ final class Filter
     ];
 
     /**
-     * @var array
-     * @psalm-var array<array{string, int, string|array|null}>
+     * @var array<array{string, int, string|array|null}
      */
-    private $filters = [];
+    private array $filters = [];
 
     public function __construct(string $label, string $value)
     {
         $this->filters[] = [$label, self::OP_EQUALS, $value];
     }
 
-    /**
-     * @param string $label
-     * @param int $operation
-     * @param string|array|null $value
-     * @return self
-     */
     public function add(string $label, int $operation, $value = null): self
     {
         if (!in_array($operation, self::OPERATIONS, true)) {
@@ -63,9 +57,6 @@ final class Filter
         return $this;
     }
 
-    /**
-     * @return string[]
-     */
     public function toRedisParams(): array
     {
         $params = [];

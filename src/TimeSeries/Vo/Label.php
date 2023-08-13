@@ -1,16 +1,13 @@
 <?php
+
 declare(strict_types=1);
 
-namespace Palicao\PhpRedisTimeSeries;
+namespace Palicao\PhpRedisTimeSeries\TimeSeries\Vo;
 
-/** @psalm-immutable */
 final class Label
 {
-    /** @var string */
-    private $key;
-
-    /** @var string */
-    private $value;
+    private string $key;
+    private string $value;
 
     /**
      * @param string $key
@@ -22,17 +19,11 @@ final class Label
         $this->value = $value;
     }
 
-    /**
-     * @codeCoverageIgnore
-     */
     public function getKey(): string
     {
         return $this->key;
     }
 
-    /**
-     * @codeCoverageIgnore
-     */
     public function getValue(): string
     {
         return $this->value;

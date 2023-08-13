@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Palicao\PhpRedisTimeSeries\Tests\Unit;
 
-use Palicao\PhpRedisTimeSeries\Exception\InvalidFilterOperationException;
-use Palicao\PhpRedisTimeSeries\Filter;
+use Palicao\PhpRedisTimeSeries\TimeSeries\Exception\InvalidFilterOperationException;
+use Palicao\PhpRedisTimeSeries\TimeSeries\Vo\Filter;
 use PHPUnit\Framework\TestCase;
 
 class FilterTest extends TestCase

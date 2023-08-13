@@ -4,15 +4,15 @@ declare(strict_types=1);
 namespace Palicao\PhpRedisTimeSeries\Tests\Unit;
 
 use DateTimeImmutable;
-use Palicao\PhpRedisTimeSeries\Label;
-use Palicao\PhpRedisTimeSeries\SampleWithLabels;
+use Palicao\PhpRedisTimeSeries\TimeSeries\RawSampleWithLabels;
+use Palicao\PhpRedisTimeSeries\TimeSeries\Vo\Label;
 use PHPUnit\Framework\TestCase;
 
 class SampleWithLabelsTest extends TestCase
 {
     public function testLabelsCanBeRetrieved(): void
     {
-        $sample = new SampleWithLabels(
+        $sample = new RawSampleWithLabels(
             'a', 
             1,
             new DateTimeImmutable('2017-01-01T20.01.06.234'),

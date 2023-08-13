@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace Palicao\PhpRedisTimeSeries\Tests\Unit;
 
 use DateTimeImmutable;
-use Palicao\PhpRedisTimeSeries\AggregationRule;
-use Palicao\PhpRedisTimeSeries\Label;
-use Palicao\PhpRedisTimeSeries\Metadata;
+use Palicao\PhpRedisTimeSeries\TimeSeries\Vo\AggregationRule;
+use Palicao\PhpRedisTimeSeries\TimeSeries\Vo\Label;
+use Palicao\PhpRedisTimeSeries\TimeSeries\Vo\Metadata;
 use PHPUnit\Framework\TestCase;
 
 class MetadataTest extends TestCase

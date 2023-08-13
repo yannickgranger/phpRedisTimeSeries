@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Palicao\PhpRedisTimeSeries\Tests\Unit;
 
-use Palicao\PhpRedisTimeSeries\AggregationRule;
-use Palicao\PhpRedisTimeSeries\Exception\InvalidAggregationException;
+use Palicao\PhpRedisTimeSeries\TimeSeries\Exception\InvalidAggregationException;
+use Palicao\PhpRedisTimeSeries\TimeSeries\Vo\AggregationRule;
 use PHPUnit\Framework\TestCase;
 
 class AggregationRuleTest extends TestCase
